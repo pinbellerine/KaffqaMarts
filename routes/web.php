@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HitungController;
+use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/admin', function () {
+    return view('layouts/admin');
+})->name('home');
+
 Route::get('/pendapatan', function () {
     return view('pendapatan');
 })->name('home');
@@ -28,5 +33,7 @@ Route::get('/hitung', [HitungController::class, 'hitung']);
 
 Route::get('/daftar', [TestController::class, 'daftar']);
 Route::post('/kirim', [TestController::class, 'kirim']);
+Route::get('/pelanggan', [PelangganController::class, 'index']);
+
 
 Route::get('/dashboard', [DashboardController::class,'index']);
