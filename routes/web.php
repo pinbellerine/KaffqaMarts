@@ -24,7 +24,7 @@ Route::get('/pendapatan', function () {
     return view('pendapatan');
 })->name('home');
 
-Route::get('/', [HitungController::class, 'hitung']);
+Route::get('/hitung', [HitungController::class, 'hitung']);
 
 Route::get('/daftar', [TestController::class, 'daftar']);
 Route::post('/kirim', [TestController::class, 'kirim']);
