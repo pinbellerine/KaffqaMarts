@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.dashboard');
 })->name('home');
 
 Route::get('/admin', function () {
@@ -29,11 +29,20 @@ Route::get('/pendapatan', function () {
     return view('pendapatan');
 })->name('home');
 
+Route::get('/pelanggan', [PelangganController::class, 'index']);
+Route::get('/tambahpelanggan', [PelangganController::class, 'tambahpelanggan']);
+Route::post('/pelanggan', [PelangganController::class, 'pelanggan']);
+Route::get('/pelanggan/{pelanggan_id}', [PelangganController::class, 'show']);
+Route::get('/pelanggan/{pelanggan_id}/edit', [PelangganController::class, 'edit']);
+Route::put('/pelanggan/{pelanggan_id}', [PelangganController::class, 'update']);
+Route::delete('/pelanggan/{pelanggan_id}', [PelangganController::class, 'destroy']);
+
+
+
 Route::get('/hitung', [HitungController::class, 'hitung']);
 
 Route::get('/daftar', [TestController::class, 'daftar']);
 Route::post('/kirim', [TestController::class, 'kirim']);
-Route::get('/pelanggan', [PelangganController::class, 'index']);
 
 
 Route::get('/dashboard', [DashboardController::class,'index']);
