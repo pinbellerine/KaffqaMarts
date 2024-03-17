@@ -3,6 +3,7 @@
 
 @section('content')
 <div class="m-3">
-    <h1>Halo Guys</h1>
+    <h1>Dassboard
+    </h1>
 </div>
 @endsection
