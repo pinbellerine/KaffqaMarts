@@ -56,7 +56,7 @@
               </li>
             </ul>
             <div class="user_option">
-              <a href="">
+              <a href="/login">
                 <span>
                   Login
                 </span>
@@ -118,7 +118,7 @@
                       the readable content of a page
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn-1">
+                      <a href="/login" class="btn-1">
                         Login
                       </a>
                       <a href="" class="btn-2">
